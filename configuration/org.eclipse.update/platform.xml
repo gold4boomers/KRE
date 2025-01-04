@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<config date="1736003486587" transient="false" version="3.0">
-<site enabled="true" policy="USER-EXCLUDE" updateable="true" url="platform:/base/">
-<feature id="org.eclipse.emf.ecore" url="features/org.eclipse.emf.ecore_2.31.0.v20230226-0921/" version="2.31.0.v20230226-0921">
-</feature>
-<feature id="com.kms.katalon.feature.engine" url="features/com.kms.katalon.feature.engine_1.0.0.202412050416/" version="1.0.0.202412050416">
-</feature>
-<feature id="org.eclipse.emf.common" url="features/org.eclipse.emf.common_2.29.0.v20230223-0922/" version="2.29.0.v20230223-0922">
-</feature>
-<feature id="org.eclipse.e4.rcp" url="features/org.eclipse.e4.rcp_4.27.0.v20230220-1431/" version="4.27.0.v20230220-1431">
-</feature>
-</site>
+<config date="1733373747934" transient="false">
+	<site updateable="true" url="platform:/base/" enabled="true" policy="USER-EXCLUDE">
+		<feature id="org.eclipse.emf.ecore" version="2.31.0.v20230226-0921" url="features/org.eclipse.emf.ecore_2.31.0.v20230226-0921/">
+		</feature>
+		<feature id="org.eclipse.emf.common" version="2.29.0.v20230223-0922" url="features/org.eclipse.emf.common_2.29.0.v20230223-0922/">
+		</feature>
+		<feature id="org.eclipse.e4.rcp" version="4.27.0.v20230220-1431" url="features/org.eclipse.e4.rcp_4.27.0.v20230220-1431/">
+		</feature>
+		<feature id="com.kms.katalon.feature.engine" version="1.0.0.202412050416" url="features/com.kms.katalon.feature.engine_1.0.0.202412050416/">
+		</feature>
+	</site>
 </config>
