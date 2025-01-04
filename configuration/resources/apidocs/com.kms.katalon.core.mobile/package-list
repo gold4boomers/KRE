@@ -1,0 +1,10 @@
+com.kms.katalon.core.mobile.common
+com.kms.katalon.core.mobile.constants
+com.kms.katalon.core.mobile.contribution
+com.kms.katalon.core.mobile.driver
+com.kms.katalon.core.mobile.exception
+com.kms.katalon.core.mobile.helper
+com.kms.katalon.core.mobile.keyword
+com.kms.katalon.core.mobile.keyword.builtin
+com.kms.katalon.core.mobile.keyword.internal
+com.kms.katalon.core.mobile.util

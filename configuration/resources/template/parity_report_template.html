@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="-1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>qTest - Katalon Studio Parity Report</title>
+  <style media="all" type="text/css">
+    body {
+      font-family: Helvetica, sans-serif;
+      font-size: 0.8em;
+      color: black;
+      padding: 6px;
+      background: white;
+    }
+
+    table {
+      table-layout: fixed;
+      word-wrap: break-word;
+      empty-cells: show;
+      font-size: 1em;
+    }
+
+    th,
+    td {
+      vertical-align: centers;
+      padding: 5px;
+    }
+
+    .test-case-table {
+      width: 100%
+    }
+
+    .test-case-table,
+    .test-case-table th,
+    .test-case-table td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    .test-case-table tr th {
+      background-color: darkgray;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="text-center">qTest - Katalon Studio Parity Report</h1>
+  <h2>Overview</h2>
+  <p><%= input.executedEntityType %> name: <%= input.executedEntity.name %></p>
+  <p>Number of executed test cases in the <%= input.executedEntityType %>: <%= input.summary.testCases.size() %></p>
+  <p>Number of executed test cases having integration with qTest: <%= input.summary.integratedTestCases.size() %></p>
+  <p>Number of integrated test cases whose version has been changed: <%= input.summary.versionDiffs.size() %>
+  </p>
+  <p>Number of integrated test cases whose test step contents have been changed:
+    <%= input.summary.testStepDiffs.size() %></p>
+  <p>Number of integrated test cases which have errors when checking for updates:
+    <%= input.summary.allTestCasesWithErrors.size() %></p>
+  </p>
+  <% if (!input.summary.testStepDiffs.isEmpty()) { %>
+  <h2>Test Cases Whose Test Step Contents Have Been Changed</h2>
+  <table class="test-case-table">
+    <colgroup>
+      <col style="width:10%">
+      <col style="width:30%">
+      <col style="width:20%">
+      <col style="width:20%">
+      <col style="width:10%">
+      <col style="width:10%">
+    </colgroup>
+    <tr>
+      <th>No.</th>
+      <th>Katalon Test Case Name</th>
+      <th>qTest Project ID</th>
+      <th>qTest Test Case Name</th>
+      <th>Current Version in Katalon Studio</th>
+      <th>Latest Version in qTest</th>
+    </tr>
+    <% input.summary.testStepDiffs.each { %>
+    <tr>
+      <td class="text-center"><%= input.summary.testStepDiffs.indexOf(it) + 1 %></td>
+      <td><%= it.testCaseEntity.idForDisplay %></td>
+      <td><%= it.oldQTestTestCase.pid %></td>
+      <td><%= it.oldQTestTestCase.name %></td>
+      <td class="text-center"><%= it.oldQTestTestCase.version %></td>
+      <td class="text-center"><%= it.newQTestTestCase.version %></td>
+    </tr>
+    <% } %>
+  </table>
+  <% } %>
+  <% if (!input.summary.allTestCasesWithErrors.isEmpty()) { %>
+  <h2>Test Cases Which Have Errors When Checking For Updates</h2>
+  <table class="test-case-table">
+    <colgroup>
+      <col style="width:10%">
+      <col style="width:30%">
+      <col style="width:50%">
+    </colgroup>
+    <tr>
+      <th>No.</th>
+      <th>Katalon Test Case Name</th>
+      <th>Error message</th>
+    </tr>
+    <% input.summary.allTestCasesWithErrors.each { %>
+    <tr>
+      <td class="text-center"><%= input.summary.allTestCasesWithErrors.indexOf(it) + 1 %></td>
+      <td><%= it.idForDisplay %></td>
+      <td class="text-center"><%= input.summary.getError(it).message %></td>
+    </tr>
+    <% } %>
+  </table>
+  <% } %>
+</body>
+
+</html>

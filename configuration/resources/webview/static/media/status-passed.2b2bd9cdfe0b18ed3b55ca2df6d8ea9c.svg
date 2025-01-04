@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com -->
+    <desc>Created with sketchtool.</desc>
+    <g id="Execution" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="KA-New-UI" transform="translate(-332.000000, -790.000000)">
+            <g id="Icon/12px/Status/Passed-Copy" transform="translate(332.000000, 790.000000)">
+                <g id="Group">
+                    <circle id="Oval" fill="#14CC8F" cx="6" cy="6" r="6"></circle>
+                    <g id="Group-2" transform="translate(6.449747, 5.449747) rotate(-45.000000) translate(-6.449747, -5.449747) translate(2.449747, 2.449747)" fill="#FFFFFF">
+                        <rect id="Rectangle" x="0.171572875" y="3.17157288" width="7" height="2" rx="1"></rect>
+                        <rect id="Rectangle" transform="translate(1.171573, 2.671573) rotate(-90.000000) translate(-1.171573, -2.671573) " x="-1.32842712" y="1.67157288" width="5" height="2" rx="1"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

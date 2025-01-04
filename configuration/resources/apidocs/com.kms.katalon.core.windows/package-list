@@ -1,0 +1,8 @@
+com.kms.katalon.core.windows.constants
+com.kms.katalon.core.windows.driver
+com.kms.katalon.core.windows.keyword
+com.kms.katalon.core.windows.keyword.builtin
+com.kms.katalon.core.windows.keyword.contribution
+com.kms.katalon.core.windows.keyword.exception
+com.kms.katalon.core.windows.keyword.helper
+com.kms.katalon.core.windows.model
